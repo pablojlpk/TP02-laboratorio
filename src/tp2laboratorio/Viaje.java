@@ -29,12 +29,18 @@ public class Viaje {
     }
 
     double calcularDistancia() {
-
-        return 0;
+        double dist = 0;
+        if (this.estansobremismaruta == true) {
+            dist = this.destino.getUbicadoEnKm() - this.origen.getUbicadoEnKm();
+        } else {
+            dist = distancia;
+        }
+        return dist;
     }
 
     double calcularCostoPeaje() {
-        return 0;
+
+        return (this.cantpeajes * 25);
     }
 
     Combustible calcularCostoCombustible(Combustible combustible) {
@@ -44,19 +50,12 @@ public class Viaje {
         camionetas 10 litros cada 100
         camiones 12 litros cada 100;
          */
-        if (Vehiculo instanceof Vehiculo) {
-            Object object = (Object) combustible;
-
-        }
-        {
-
-        }
-
         Combustible retorna;
         return retorna;
     }
 
     double calcularCostoTotal() {
-        return 0;
+
+       return costotal;
     }
 }
