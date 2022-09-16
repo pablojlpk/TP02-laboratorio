@@ -21,7 +21,6 @@ public class Viaje {
     public Viaje() {
     }
 
-    
     public Viaje(Ciudad origen, Ciudad destino, Vehiculo vehiculo, int cantpeajes) {
         this.origen = origen;
         this.destino = destino;
@@ -29,8 +28,6 @@ public class Viaje {
         this.cantpeajes = cantpeajes;
     }
 
-    
-    
     double calcularDistancia() {
 
         return 0;
@@ -41,6 +38,20 @@ public class Viaje {
     }
 
     Combustible calcularCostoCombustible(Combustible combustible) {
+        /* el consumo de combustible 
+      
+        autos=7 litros cada 100
+        camionetas 10 litros cada 100
+        camiones 12 litros cada 100;
+         */
+        if (Vehiculo instanceof Vehiculo) {
+            Object object = (Object) combustible;
+
+        }
+        {
+
+        }
+
         Combustible retorna;
         return retorna;
     }
