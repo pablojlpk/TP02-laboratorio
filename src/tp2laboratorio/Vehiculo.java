@@ -43,8 +43,9 @@ public class Vehiculo {
     
     public double calcularCostoDeCombustible( Combustible combustible){
         double precio=0;
-        
+        System.out.println("--");   
     return precio;
     }
      
+
 }
