@@ -1,14 +1,45 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tp2laboratorio;
 
-/**
- *
- * @author Tommy
- */
 public class Ciudad {
+    
+    private int UbicadoEnKm;
+    private String sobreRuta;
+    private String Nombre;
+
+    
+    public Ciudad() {
+    }
+
+    public int getUbicadoEnKm() {
+        return UbicadoEnKm;
+    }
+
+    public void setUbicadoEnKm(int UbicadoEnKm) {
+        this.UbicadoEnKm = UbicadoEnKm;
+    }
+
+    public String getSobreRuta() {
+        return sobreRuta;
+    }
+
+    public void setSobreRuta(String sobreRuta) {
+        this.sobreRuta = sobreRuta;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Ciudad{" + "UbicadoEnKm = " + UbicadoEnKm + ", sobreRuta = " + sobreRuta + ", Nombre = " + Nombre + '}';
+    }
+    
+    
     
 }
