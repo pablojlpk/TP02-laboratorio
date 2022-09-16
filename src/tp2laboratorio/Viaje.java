@@ -11,12 +11,12 @@ package tp2laboratorio;
  */
 public class Viaje {
 
-    Ciudad origen;
-    Ciudad destino;
-    int distancia;
-    Vehiculo vehiculo;
-    int cantpeajes;
-    boolean estansobremismaruta;
+    private Ciudad origen;
+    private Ciudad destino;
+    private int distancia;
+    private Vehiculo vehiculo;
+    private int cantpeajes;
+    private boolean estansobremismaruta;
 
     public Viaje() {
     }
