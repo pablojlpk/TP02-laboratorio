@@ -18,16 +18,34 @@ public class Viaje {
     int cantpeajes;
     boolean estansobremismaruta;
 
-    double calcularDistancia(){
-        
+    public Viaje() {
     }
-    double calcularCostoPeaje(){
-        
+
+    
+    public Viaje(Ciudad origen, Ciudad destino, Vehiculo vehiculo, int cantpeajes) {
+        this.origen = origen;
+        this.destino = destino;
+        this.vehiculo = vehiculo;
+        this.cantpeajes = cantpeajes;
     }
-Combustible calcularCostoCombustible(Combustible combustible){
+
     
-}
-double calcularCostoTotal(){
     
-}
+    double calcularDistancia() {
+
+        return 0;
+    }
+
+    double calcularCostoPeaje() {
+        return 0;
+    }
+
+    Combustible calcularCostoCombustible(Combustible combustible) {
+        Combustible retorna;
+        return retorna;
+    }
+
+    double calcularCostoTotal() {
+        return 0;
+    }
 }
