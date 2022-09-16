@@ -46,7 +46,7 @@ public class Viaje {
     Combustible calcularCostoCombustible(Combustible combustible) {
         /* el consumo de combustible 
       
-        autos=7 litros cada 100
+        utos=7 litros cada 100
         camionetas 10 litros cada 100
         camiones 12 litros cada 100;
          */
