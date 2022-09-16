@@ -17,6 +17,7 @@ public class Tp2laboratorio {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("prueba");
+        System.out.println("que genios!!");
     }
     
 }
