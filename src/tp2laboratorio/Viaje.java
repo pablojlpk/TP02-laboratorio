@@ -43,7 +43,6 @@ public class Viaje {
         double val=0;
         if (this.vehiculo instanceof Auto ||this.vehiculo instanceof Camioneta ) {
             val=100;
-            
         }else {
             val=150;
         }
