@@ -14,6 +14,13 @@ public class Auto extends Vehiculo {
     public Auto() {
         super.marca = marca;
         super.patente = patente;
+        super.combustible = combustible;
+    }
+
+    @Override
+    public double calcularCostoDeCombustible(Combustible combustible) {
+       double precio = combustible.getPrecio()*(0.07);
+       return precio;
     }
     
 }
