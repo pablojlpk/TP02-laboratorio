@@ -20,6 +20,7 @@ public class Viaje {
 
     public Viaje() {
     }
+
     public Viaje(Ciudad origen, Ciudad destino, Vehiculo vehiculo, int cantpeajes) {
         this.origen = origen;
         this.destino = destino;
@@ -27,31 +28,31 @@ public class Viaje {
         this.cantpeajes = cantpeajes;
     }
 
-    
-    
     double calcularDistancia() {
-        double dist=0;
-        if (this.estansobremismaruta==true) {
-            dist=this.destino.getUbicadoEnKm()-this.origen.getUbicadoEnKm();
-        }else{
-                    dist=distancia;
-                    }
-        return dist;
+        double dist = 0;
+        if (this.estansobremismaruta == true) {
+            dist = this.destino.getUbicadoEnKm() - this.origen.getUbicadoEnKm();
+            dist = Math.abs(dist);
+        } else {
+            dist = distancia;
         }
-        
-    
-
-    double calcularCostoPeaje() {
-        return this.cantpeajes*150;
-
+        return dist;
     }
 
-  
+    double calcularCostoPeaje() {
+        double val=0;
+        if (this.vehiculo instanceof Auto ||this.vehiculo instanceof Camioneta ) {
+            val=100;
+            
+        }else {
+            val=150;
+        }
+        return this.cantpeajes * val;
+    }
+
     double calcularCostoTotal() {
+        double = calcularDistancia() + calcularCostoTotal();
         return 0;
-        
-        
-        
-        
+
     }
 }
