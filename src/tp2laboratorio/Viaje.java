@@ -44,7 +44,7 @@ public class Viaje {
 
         /* el consumo de combustible 
       
-        utos=7 litros cada 100
+        autos=7 litros cada 100
         camionetas 10 litros cada 100
         camiones 12 litros cada 100;
          */
