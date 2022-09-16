@@ -11,16 +11,17 @@ package tp2laboratorio;
  */
 public class Viaje {
 
-    private Ciudad origen;
-    private Ciudad destino;
-    private int distancia;
-    private Vehiculo vehiculo;
-    private int cantpeajes;
-    private boolean estansobremismaruta;
+    Ciudad origen;
+    Ciudad destino;
+    int distancia;
+    Vehiculo vehiculo;
+    int cantpeajes;
+    boolean estansobremismaruta;
 
     public Viaje() {
     }
 
+    
     public Viaje(Ciudad origen, Ciudad destino, Vehiculo vehiculo, int cantpeajes) {
         this.origen = origen;
         this.destino = destino;
@@ -28,34 +29,31 @@ public class Viaje {
         this.cantpeajes = cantpeajes;
     }
 
+    
+    
     double calcularDistancia() {
-        double dist = 0;
-        if (this.estansobremismaruta == true) {
-            dist = this.destino.getUbicadoEnKm() - this.origen.getUbicadoEnKm();
-        } else {
-            dist = distancia;
-        }
-        return dist;
+        
+        return 0;
     }
 
     double calcularCostoPeaje() {
-
-        return (this.cantpeajes * 25);
+        return 0;
     }
 
     Combustible calcularCostoCombustible(Combustible combustible) {
+
         /* el consumo de combustible 
       
         utos=7 litros cada 100
         camionetas 10 litros cada 100
         camiones 12 litros cada 100;
          */
+
         Combustible retorna;
         return retorna;
     }
 
     double calcularCostoTotal() {
-
-       return costotal;
+        return 0;
     }
 }
