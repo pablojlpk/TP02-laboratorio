@@ -50,8 +50,8 @@ public class Viaje {
     }
 
     double calcularCostoTotal() {
-        double = calcularDistancia() + calcularCostoTotal();
-        return 0;
+        double ct= calcularDistancia() + calcularCostoTotal();
+        return ct;
 
     }
 }
