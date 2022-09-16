@@ -41,6 +41,9 @@ public class Vehiculo {
         this.combustible = combustible;
     }
     
-    public doublw calcularCostoDeCombustible(){}
+    public double calcularCostoDeCombustible(){
+        
+        return 0;
+}
     
 }
