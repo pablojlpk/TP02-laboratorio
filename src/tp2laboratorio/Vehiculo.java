@@ -41,9 +41,11 @@ public class Vehiculo {
         this.combustible = combustible;
     }
     
-    public double calcularCostoDeCombustible(){
-        
-        return 0;
-}
-    
+    public double calcularCostoDeCombustible( Combustible combustible){
+        double precio=0;
+        System.out.println("--");   
+    return precio;
+    }
+     
+
 }

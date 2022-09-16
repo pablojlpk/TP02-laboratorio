@@ -14,10 +14,15 @@ public class Camion extends Vehiculo {
     public Camion() {
         super.marca = marca;
         super.patente = patente;
+        super.combustible = combustible;
     }
 
     
-
+@Override
+    public double calcularCostoDeCombustible(Combustible combustible) {
+       double precio = combustible.getPrecio()*(0.12);
+       return precio;
+    }
         
     
 }
