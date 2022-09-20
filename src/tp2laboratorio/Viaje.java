@@ -54,4 +54,11 @@ public class Viaje {
         return ct;
 
     }
+
+    @Override
+    public String toString() {
+        return "Viaje{" + "origen=" + origen + ", destino=" + destino + ", distancia=" + distancia + ", vehiculo=" + vehiculo + ", cantpeajes=" + cantpeajes + ", estansobremismaruta=" + estansobremismaruta + '}';
+    }
+
+
 }
