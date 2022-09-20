@@ -41,16 +41,17 @@ public class Viaje {
 
     double calcularCostoPeaje() {
         double val=0;
-        if (this.vehiculo instanceof Auto ||this.vehiculo instanceof Camioneta ) {
-            val=100;
-        }else {
+        if (this.vehiculo instanceof Auto ||this.vehiculo instanceof Camion ) {
             val=150;
+        }else {
+            val=100;
         }
         return this.cantpeajes * val;
     }
 
     double calcularCostoTotal() {
-        double ct= calcularDistancia() + calcularCostoTotal();
+        double ct= calcularDistancia() + calcularCostoPeaje()+this.distancia*this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible);
+        
         return ct;
 
     }
@@ -59,6 +60,4 @@ public class Viaje {
     public String toString() {
         return "Viaje{" + "origen=" + origen + ", destino=" + destino + ", distancia=" + distancia + ", vehiculo=" + vehiculo + ", cantpeajes=" + cantpeajes + ", estansobremismaruta=" + estansobremismaruta + '}';
     }
-
-
 }
