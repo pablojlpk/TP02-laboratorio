@@ -46,6 +46,12 @@ public class Vehiculo {
         System.out.println("--");   
     return precio;
     }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" + "marca = " + marca + ", patente = " + patente + ", combustible = " + combustible + '}';
+    }
+    
      
 
 }
