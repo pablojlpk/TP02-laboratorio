@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="tp2laboratorio">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="tp2laboratorio" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoDeCombustible" returnType="double" visibility="public">
+          <Argument type="Combustible" name="combustible"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camion" package="tp2laboratorio" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoDeCombustible" returnType="double" visibility="public">
+          <Argument type="Combustible" name="combustible"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camioneta" package="tp2laboratorio" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="calcularCostoDeCombustible" returnType="double" visibility="public">
+          <Argument type="Combustible" name="combustible"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ciudad" package="tp2laboratorio" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="UbicadoEnKm" type="int" visibility="private"/>
+        <Field name="sobreRuta" type="String" visibility="private"/>
+        <Field name="Nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getUbicadoEnKm" returnType="int" visibility="public"/>
+        <Method name="setUbicadoEnKm" returnType="void" visibility="public">
+          <Argument type="int" name="UbicadoEnKm"/>
+        </Method>
+        <Method name="getSobreRuta" returnType="String" visibility="public"/>
+        <Method name="setSobreRuta" returnType="void" visibility="public">
+          <Argument type="String" name="sobreRuta"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Combustible" package="tp2laboratorio" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tipo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTipo" returnType="String" visibility="public"/>
+        <Method name="setTipo" returnType="void" visibility="public">
+          <Argument type="String" name="tipo"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Tp2laboratorio" package="tp2laboratorio" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="iniciarViaje" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Viaje" name="v"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vehiculo" package="tp2laboratorio" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="protected"/>
+        <Field name="patente" type="String" visibility="protected"/>
+        <Field name="combustible" type="Combustible" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+        <Method name="getPatente" returnType="String" visibility="public"/>
+        <Method name="setPatente" returnType="void" visibility="public">
+          <Argument type="String" name="patente"/>
+        </Method>
+        <Method name="getCombustible" returnType="Combustible" visibility="public"/>
+        <Method name="setCombustible" returnType="void" visibility="public">
+          <Argument type="Combustible" name="combustible"/>
+        </Method>
+        <Method name="calcularCostoDeCombustible" returnType="double" visibility="public">
+          <Argument type="Combustible" name="combustible"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Viaje" package="tp2laboratorio" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="origen" type="Ciudad" visibility="private"/>
+        <Field name="destino" type="Ciudad" visibility="private"/>
+        <Field name="distancia" type="double" visibility="private"/>
+        <Field name="vehiculo" type="Vehiculo" visibility="private"/>
+        <Field name="cantpeajes" type="int" visibility="private"/>
+        <Field name="estansobremismaruta" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Ciudad" name="origen"/>
+          <Argument type="Ciudad" name="destino"/>
+          <Argument type="Vehiculo" name="vehiculo"/>
+          <Argument type="int" name="cantpeajes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isEstansobremismaruta" returnType="boolean" visibility="public"/>
+        <Method name="setEstansobremismaruta" returnType="void" visibility="public">
+          <Argument type="boolean" name="estansobremismaruta"/>
+        </Method>
+        <Method name="getOrigen" returnType="Ciudad" visibility="public"/>
+        <Method name="setOrigen" returnType="void" visibility="public">
+          <Argument type="Ciudad" name="origen"/>
+        </Method>
+        <Method name="getDestino" returnType="Ciudad" visibility="public"/>
+        <Method name="setDestino" returnType="void" visibility="public">
+          <Argument type="Ciudad" name="destino"/>
+        </Method>
+        <Method name="getDistancia" returnType="double" visibility="public"/>
+        <Method name="setDistancia" returnType="void" visibility="public">
+          <Argument type="double" name="distancia"/>
+        </Method>
+        <Method name="getVehiculo" returnType="Vehiculo" visibility="public"/>
+        <Method name="setVehiculo" returnType="void" visibility="public">
+          <Argument type="Vehiculo" name="vehiculo"/>
+        </Method>
+        <Method name="getCantpeajes" returnType="int" visibility="public"/>
+        <Method name="setCantpeajes" returnType="void" visibility="public">
+          <Argument type="int" name="cantpeajes"/>
+        </Method>
+        <Method name="calcularDistancia" returnType="double" visibility="package"/>
+        <Method name="calcularCostoPeaje" returnType="double" visibility="package"/>
+        <Method name="calcularCostoCombustble" returnType="double" visibility="package">
+          <Argument type="Vehiculo" name="vi"/>
+        </Method>
+        <Method name="calcularCostoTotal" returnType="double" visibility="package"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="tp2laboratorio.Camion" target="tp2laboratorio.Vehiculo"/>
+    <IsRelation name="is" source="tp2laboratorio.Auto" target="tp2laboratorio.Vehiculo"/>
+    <UseRelation source="tp2laboratorio.Vehiculo" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="combustible" source="tp2laboratorio.Vehiculo" target="tp2laboratorio.Combustible" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="tp2laboratorio.Camioneta" target="tp2laboratorio.Vehiculo"/>
+    <HasRelation name="destino" source="tp2laboratorio.Viaje" target="tp2laboratorio.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tp2laboratorio.Viaje" target="tp2laboratorio.Ciudad" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tp2laboratorio.Viaje" target="tp2laboratorio.Vehiculo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tp2laboratorio.Auto" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tp2laboratorio.Camioneta" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tp2laboratorio.Camion" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vehiculo" source="tp2laboratorio.Viaje" target="tp2laboratorio.Vehiculo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="origen" source="tp2laboratorio.Viaje" target="tp2laboratorio.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tp2laboratorio.Tp2laboratorio" target="tp2laboratorio.Viaje" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
