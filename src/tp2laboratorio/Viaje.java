@@ -11,20 +11,70 @@ package tp2laboratorio;
  */
 public class Viaje {
 
-    Ciudad origen;
-    Ciudad destino;
-    int distancia;
-    Vehiculo vehiculo;
-    int cantpeajes;
-    boolean estansobremismaruta;
+    private Ciudad origen;
+    private Ciudad destino;
+    private double distancia;
+    private Vehiculo vehiculo;
+    private int cantpeajes;
+    private boolean estansobremismaruta;
 
     public Viaje() {
+        this.estansobremismaruta = false;
     }
 
     public Viaje(Ciudad origen, Ciudad destino, Vehiculo vehiculo, int cantpeajes) {
         this.origen = origen;
         this.destino = destino;
         this.vehiculo = vehiculo;
+        this.cantpeajes = cantpeajes;
+        this.estansobremismaruta = false;
+    }
+
+    public boolean isEstansobremismaruta() {
+        return estansobremismaruta;
+    }
+
+    public void setEstansobremismaruta(boolean estansobremismaruta) {
+        this.estansobremismaruta = estansobremismaruta;
+    }
+
+    public Ciudad getOrigen() {
+        return origen;
+    }
+
+    public void setOrigen(Ciudad origen) {
+        this.origen = origen;
+    }
+
+    public Ciudad getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Ciudad destino) {
+        this.destino = destino;
+    }
+
+    public double getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
+    }
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public int getCantpeajes() {
+        return cantpeajes;
+    }
+
+    public void setCantpeajes(int cantpeajes) {
         this.cantpeajes = cantpeajes;
     }
 
@@ -40,18 +90,27 @@ public class Viaje {
     }
 
     double calcularCostoPeaje() {
-        double val=0;
-        if (this.vehiculo instanceof Auto ||this.vehiculo instanceof Camioneta ) {
-            val=100;
-        }else {
-            val=150;
+        double val = 0;
+        if (this.vehiculo instanceof Auto || this.vehiculo instanceof Camioneta) {
+            val = 150;
+        } else {
+            val = 100;
         }
         return this.cantpeajes * val;
     }
 
-    double calcularCostoTotal() {
-        double ct= calcularDistancia() + calcularCostoTotal();
-        return ct;
+    double calcularCostoCombustble(Vehiculo vi) {
+        return this.distancia * vi.calcularCostoDeCombustible(vi.combustible);
+    }
 
+    double calcularCostoTotal() {
+        return calcularCostoPeaje() + (this.distancia * this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible));
+
+    }
+
+    @Override
+    public String toString() {
+        return "Viaje:{\n" + "* ciudad de origen: " + origen + "\n* Ciudad de  destino=" + destino + "\n   -Distancia=" + distancia
+                + "\n" + "   -Vehiculo=" + vehiculo + "\n   -Cantidad de peajes: " + cantpeajes + " -Sobre misma Ruta: " + estansobremismaruta + '}';
     }
 }
