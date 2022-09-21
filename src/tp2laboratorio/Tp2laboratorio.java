@@ -73,6 +73,7 @@ public class Tp2laboratorio {
         v1.setOrigen(c1);
         v1.setDestino(c2);
         v1.setCantpeajes(3);
+
         //se crea viaje en rutas distintas
         v2.setVehiculo(camion1);
         v2.setOrigen(c1);
