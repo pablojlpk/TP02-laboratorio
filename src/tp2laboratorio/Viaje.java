@@ -55,12 +55,10 @@ public class Viaje {
         return this.distancia * vi.calcularCostoDeCombustible(vi.combustible);
     }
 
-    double calcularCostoTotal() {
-        double ct = calcularDistancia() + calcularCostoPeaje() + this.distancia * this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible);
-
+  double calcularCostoTotal() {
+        double ct =  calcularCostoPeaje() +( this.distancia * this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible));
         return ct;
-
-    }
+  }
 
     @Override
     public String toString() {
