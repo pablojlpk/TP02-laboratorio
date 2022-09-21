@@ -11,14 +11,15 @@ package tp2laboratorio;
  */
 public class Viaje {
 
-    Ciudad origen;
+    private Ciudad origen;
     Ciudad destino;
-    int distancia;
+    double distancia;
     Vehiculo vehiculo;
     int cantpeajes;
     boolean estansobremismaruta;
 
     public Viaje() {
+        this.estansobremismaruta = false;
     }
 
     public Viaje(Ciudad origen, Ciudad destino, Vehiculo vehiculo, int cantpeajes) {
@@ -26,6 +27,7 @@ public class Viaje {
         this.destino = destino;
         this.vehiculo = vehiculo;
         this.cantpeajes = cantpeajes;
+        this.estansobremismaruta = false;
     }
 
     double calcularDistancia() {
@@ -40,24 +42,30 @@ public class Viaje {
     }
 
     double calcularCostoPeaje() {
-        double val=0;
-        if (this.vehiculo instanceof Auto ||this.vehiculo instanceof Camion ) {
-            val=150;
-        }else {
-            val=100;
+        double val = 0;
+        if (this.vehiculo instanceof Auto || this.vehiculo instanceof Camioneta) {
+            val = 150;
+        } else {
+            val = 100;
         }
         return this.cantpeajes * val;
     }
 
+    double calcularCostoCombustble(Vehiculo vi) {
+        return this.distancia * vi.calcularCostoDeCombustible(vi.combustible);
+    }
+
     double calcularCostoTotal() {
-        double ct= calcularDistancia() + calcularCostoPeaje()+this.distancia*this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible);
-        
+        double ct = calcularDistancia() + calcularCostoPeaje() + this.distancia * this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible);
+
         return ct;
 
     }
 
     @Override
     public String toString() {
-        return "Viaje{" + "origen=" + origen + ", destino=" + destino + ", distancia=" + distancia + ", vehiculo=" + vehiculo + ", cantpeajes=" + cantpeajes + ", estansobremismaruta=" + estansobremismaruta + '}';
+        //return "Viaje{" + "ciudad de origen: " + origen + ", destino=" + destino + ", distancia=" + distancia + ", vehiculo=" + vehiculo + ", cantpeajes=" + cantpeajes + ", estansobremismaruta=" + estansobremismaruta + '}';
+        return "Viaje:{\n" + "ciudad de origen: " + origen + "\n, Ciudad de  destino=" + destino + "\n, distancia=" + distancia
+                + "\n" + ", vehiculo=" + vehiculo + "\n, cantpeajes=" + cantpeajes + ", estansobremismaruta=" + estansobremismaruta + '}';
     }
 }
