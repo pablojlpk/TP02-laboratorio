@@ -2,7 +2,7 @@
 
 <ClassDiagram name="tp2laboratorio">
   <ClassDiagramComponents>
-    <Class name="Auto" package="tp2laboratorio" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="Auto" package="tp2laboratorio" visibility="public" xPosition="1488.0" yPosition="698.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -13,7 +13,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Camion" package="tp2laboratorio" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Camion" package="tp2laboratorio" visibility="public" xPosition="465.0" yPosition="682.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -24,7 +24,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Camioneta" package="tp2laboratorio" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Camioneta" package="tp2laboratorio" visibility="public" xPosition="949.0" yPosition="726.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public"/>
@@ -35,7 +35,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Ciudad" package="tp2laboratorio" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="Ciudad" package="tp2laboratorio" visibility="public" xPosition="1174.0" yPosition="20.0">
       <Fields>
         <Field name="UbicadoEnKm" type="int" visibility="private"/>
         <Field name="sobreRuta" type="String" visibility="private"/>
@@ -60,7 +60,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Combustible" package="tp2laboratorio" visibility="public" xPosition="1220.0" yPosition="20.0">
+    <Class name="Combustible" package="tp2laboratorio" visibility="public" xPosition="1668.0" yPosition="371.0">
       <Fields>
         <Field name="tipo" type="String" visibility="private"/>
         <Field name="precio" type="double" visibility="private"/>
@@ -82,7 +82,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Tp2laboratorio" package="tp2laboratorio" visibility="public" xPosition="1520.0" yPosition="20.0">
+    <Class name="Tp2laboratorio" package="tp2laboratorio" visibility="public" xPosition="257.0" yPosition="30.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -94,7 +94,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Vehiculo" package="tp2laboratorio" visibility="public" xPosition="1820.0" yPosition="20.0">
+    <Class name="Vehiculo" package="tp2laboratorio" visibility="public" xPosition="1110.0" yPosition="371.0">
       <Fields>
         <Field name="marca" type="String" visibility="protected"/>
         <Field name="patente" type="String" visibility="protected"/>
@@ -122,7 +122,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Viaje" package="tp2laboratorio" visibility="public" xPosition="2120.0" yPosition="20.0">
+    <Class name="Viaje" package="tp2laboratorio" visibility="public" xPosition="499.0" yPosition="67.0">
       <Fields>
         <Field name="origen" type="Ciudad" visibility="private"/>
         <Field name="destino" type="Ciudad" visibility="private"/>
@@ -176,19 +176,12 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <IsRelation name="is" source="tp2laboratorio.Camion" target="tp2laboratorio.Vehiculo"/>
-    <IsRelation name="is" source="tp2laboratorio.Auto" target="tp2laboratorio.Vehiculo"/>
-    <UseRelation source="tp2laboratorio.Vehiculo" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="combustible" source="tp2laboratorio.Vehiculo" target="tp2laboratorio.Combustible" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="tp2laboratorio.Camioneta" target="tp2laboratorio.Vehiculo"/>
-    <HasRelation name="destino" source="tp2laboratorio.Viaje" target="tp2laboratorio.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="tp2laboratorio.Viaje" target="tp2laboratorio.Ciudad" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="tp2laboratorio.Viaje" target="tp2laboratorio.Vehiculo" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="tp2laboratorio.Auto" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="tp2laboratorio.Camioneta" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="tp2laboratorio.Camion" target="tp2laboratorio.Combustible" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="vehiculo" source="tp2laboratorio.Viaje" target="tp2laboratorio.Vehiculo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="origen" source="tp2laboratorio.Viaje" target="tp2laboratorio.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="tp2laboratorio.Tp2laboratorio" target="tp2laboratorio.Viaje" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="tp2laboratorio.Camion" target="tp2laboratorio.Vehiculo"/>
+    <HasRelation name="vehiculo" source="tp2laboratorio.Viaje" target="tp2laboratorio.Vehiculo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="origen/destino" source="tp2laboratorio.Viaje" target="tp2laboratorio.Ciudad" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="tp2laboratorio.Camioneta" target="tp2laboratorio.Vehiculo"/>
+    <HasRelation name="combustible" source="tp2laboratorio.Vehiculo" target="tp2laboratorio.Combustible" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="tp2laboratorio.Auto" target="tp2laboratorio.Vehiculo"/>
   </ClassDiagramRelations>
 </ClassDiagram>
