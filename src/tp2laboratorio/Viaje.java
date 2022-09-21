@@ -12,11 +12,11 @@ package tp2laboratorio;
 public class Viaje {
 
     private Ciudad origen;
-    Ciudad destino;
-    double distancia;
-    Vehiculo vehiculo;
-    int cantpeajes;
-    boolean estansobremismaruta;
+    private Ciudad destino;
+    private double distancia;
+    private Vehiculo vehiculo;
+    private int cantpeajes;
+    private boolean estansobremismaruta;
 
     public Viaje() {
         this.estansobremismaruta = false;
@@ -28,6 +28,54 @@ public class Viaje {
         this.vehiculo = vehiculo;
         this.cantpeajes = cantpeajes;
         this.estansobremismaruta = false;
+    }
+
+    public boolean isEstansobremismaruta() {
+        return estansobremismaruta;
+    }
+
+    public void setEstansobremismaruta(boolean estansobremismaruta) {
+        this.estansobremismaruta = estansobremismaruta;
+    }
+
+    public Ciudad getOrigen() {
+        return origen;
+    }
+
+    public void setOrigen(Ciudad origen) {
+        this.origen = origen;
+    }
+
+    public Ciudad getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Ciudad destino) {
+        this.destino = destino;
+    }
+
+    public double getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
+    }
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public int getCantpeajes() {
+        return cantpeajes;
+    }
+
+    public void setCantpeajes(int cantpeajes) {
+        this.cantpeajes = cantpeajes;
     }
 
     double calcularDistancia() {
@@ -55,15 +103,14 @@ public class Viaje {
         return this.distancia * vi.calcularCostoDeCombustible(vi.combustible);
     }
 
-  double calcularCostoTotal() {
-        double ct =  calcularCostoPeaje() +( this.distancia * this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible));
-        return ct;
-  }
+    double calcularCostoTotal() {
+        return calcularCostoPeaje() + (this.distancia * this.vehiculo.calcularCostoDeCombustible(this.vehiculo.combustible));
+
+    }
 
     @Override
     public String toString() {
-        //return "Viaje{" + "ciudad de origen: " + origen + ", destino=" + destino + ", distancia=" + distancia + ", vehiculo=" + vehiculo + ", cantpeajes=" + cantpeajes + ", estansobremismaruta=" + estansobremismaruta + '}';
-        return "Viaje:{\n" + "ciudad de origen: " + origen + "\n, Ciudad de  destino=" + destino + "\n, distancia=" + distancia
-                + "\n" + ", vehiculo=" + vehiculo + "\n, cantpeajes=" + cantpeajes + ", estansobremismaruta=" + estansobremismaruta + '}';
+        return "Viaje:{\n" + "* ciudad de origen: " + origen + "\n* Ciudad de  destino=" + destino + "\n   -Distancia=" + distancia
+                + "\n" + "   -Vehiculo=" + vehiculo + "\n   -Cantidad de peajes: " + cantpeajes + " -Sobre misma Ruta: " + estansobremismaruta + '}';
     }
 }
