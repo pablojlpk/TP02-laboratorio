@@ -20,17 +20,17 @@ public class Tp2laboratorio {
      */
     public static void main(String[] args) {
         String mensaje;
-        mensaje="A MODO DE EJEMPLO SE HAN PARAMETRIZADO 2 VIAJES:\n"
+        mensaje = "A MODO DE EJEMPLO SE HAN PARAMETRIZADO 2 VIAJES:\n"
                 + " el primero se realiza en dos ciudades ubicadas en la misma ruta.\n-El Segundo viaje se realiza a una ciudad ubicada en otra ruta."
                 + "\n-Dichos viajes se realizan con VEHÍCULOS DIFERENTES."
-                +"\n los vehículos utilizados a su vez llevan COMBUSTIBLES DIFERENTES.";
-          
+                + "\n los vehículos utilizados a su vez llevan COMBUSTIBLES DIFERENTES.";
+
         JOptionPane.showMessageDialog(null, mensaje);
-        
-  //se da de alta tres tipos de combustibles              
+
+        //se da de alta tres tipos de combustibles              
         Combustible gnc = new Combustible("gas");
         Combustible ni = new Combustible("nafta");
-        Combustible ns = new Combustible("nafta Super");
+        Combustible ns = new Combustible("GasOil");
         //faltaría agregar en el constructor de combustible que guarde el tipo de nafta - ver constructor vacio
         //tostring vehiculo
 
@@ -46,11 +46,10 @@ public class Tp2laboratorio {
         auto1.combustible = ni;
 
         //CAMION
-        camion1.setMarca("VOLT");
+        camion1.setMarca("SCANIA");
         camion1.setPatente("AB-055 B6");
-        camion1.combustible = gnc;
-
-//se parametriza un viaje 1 de prueba
+        camion1.combustible = ns;
+        //se crean los viajes y las ciudades
         Viaje v1 = new Viaje();
         Viaje v2 = new Viaje();
         Ciudad c1 = new Ciudad();
@@ -83,7 +82,7 @@ public class Tp2laboratorio {
         System.out.println("----iniciando viaje----");
         iniciarViaje(v1);
         iniciarViaje(v2);
-        
+
     }
 
     public static void iniciarViaje(Viaje v) {

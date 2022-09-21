@@ -7,6 +7,7 @@ public class Combustible {
     private double precio;
 
     public Combustible(String tipo) {
+        this.tipo=tipo;
         if(tipo.equalsIgnoreCase("gas")){
             this.precio = 78;
         } else if (tipo.equalsIgnoreCase("nafta")){
