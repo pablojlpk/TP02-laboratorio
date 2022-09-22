@@ -34,10 +34,6 @@ public class Tp2laboratorio {
         //faltaría agregar en el constructor de combustible que guarde el tipo de nafta - ver constructor vacio
         //tostring vehiculo
 
-        System.out.println(gnc);
-        System.out.println(ni);
-        System.out.println(ns);
-
         Vehiculo auto1 = new Auto();
         Vehiculo camion1 = new Camion();
 
